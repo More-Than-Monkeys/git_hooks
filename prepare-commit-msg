@@ -17,7 +17,7 @@ else:
 print (f"prepare-commit-msg: File: {commit_msg_filepath}\nType: {commit_type}\nHash: {commit_hash}")
 
 # Figure out which branch we're on
-branch = check_output(['git', 'symbolic-ref', '--short', 'HEAD']).strip()
+branch = str(check_output(['git', 'symbolic-ref', '--short', 'HEAD']).strip())
 print(f"prepare-commit-msg: On branch {branch}")
 
 with open(commit_msg_filepath, 'r+') as f:
