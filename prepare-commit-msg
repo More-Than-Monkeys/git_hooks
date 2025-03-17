@@ -23,4 +23,4 @@ print(f"prepare-commit-msg: On branch {branch}")
 with open(commit_msg_filepath, 'r+') as f:
     content = f.read()
     f.seek(0, 0)
-    f.write(f"[{branch}] - {content}")
+    f.write(f"[{str(branch)}] - {content}")
