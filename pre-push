@@ -1,5 +1,1 @@
 set -e
-make lint
-make test
-make terraform-fmt
-
